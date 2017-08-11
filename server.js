@@ -22,7 +22,7 @@ This is the content of My First article.This is the content of My First article.
 <p>This is the content of My First article.This is the content of My First article.This is the content of My First article.
 This is the content of My First article.This is the content of My First article.This is the content of My First article.
 This is the content of My First article.This is the content of My First article.</p>'
-    '
+`
 };
 function createTemplate (data){
 var title=data.title;
@@ -30,7 +30,7 @@ var heading=data.heading;
 var date=data.date;
 var content=data.content;
 
-var htmlTemplate=
+var htmlTemplate=`
 <html>
 <head>
 <title>${title}</title>
@@ -52,7 +52,7 @@ ${content}
 </div>
 </div>
 </body>
-</html>
+</html>`
 ;
 return htmlTemplate;
 }
