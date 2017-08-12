@@ -20,7 +20,7 @@ var articles= {
     date:"13 august 2017",
     content:
     `<p>This is the content of My Second article.</p>`},
-    'article3':{
+    'article-3':{
     title:"Article-three|Anand singh",
     heading:"Article Three",
     date:"14 august 2017",
