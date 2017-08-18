@@ -2,12 +2,22 @@
 var button=document.getElementById('counter');
 button.onclick=function()
 {
-    //make a request to counter endpoints
-    
+    //create a request object
+    var request=new XMLHttpRequest();
     //capture the response
-    
-    //render the variable in correct span
-    counter=counter+1;
-    var span=document.getElementById('count');
-    span.innerHTML=counter.toString();
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.Done){
+            //take some action
+            if(request.status===200){
+                var counter=request.responsetext();
+                var span=document.getElementById('count');
+                span.innerHTML=counter.toString();
+            }
+            
+        }
+        //not done yet
+    };
+    //make the request
+    request.open(GET,'http://anandsingh9594.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
