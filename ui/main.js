@@ -18,6 +18,6 @@ button.onclick=function()
         //not done yet
     };
     //make the request
-    request.open(GET,'http://anandsingh9594.imad.hasura-app.io/counter',true);
+    request.open('GET','http://anandsingh9594.imad.hasura-app.io/counter',true);
     request.send(null);
 };
